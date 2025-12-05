@@ -4,7 +4,7 @@ A Python application that recursively scans a local directory and sends file inf
 
 ## Overview
 
-This project implements a robust file system scanner that integrates with RabbitMQ for asynchronous message processing. Built with Python and the Pika library, it provides a scalable solution for processing large directory structures and distributing file metadata through message queues.
+This project implements a robust file system scanner that integrates with RabbitMQ for asynchronous message processing. Built with Python and the Pika library, it provides a scalable and simple solution for processing large directory structures and distributing file metadata through message queues.
 
 ### Key Features
 
@@ -180,6 +180,11 @@ If you encounter connection errors:
 - Ensure RabbitMQ is running: `docker ps`
 - Check that ports 5672 and 15672 are not already in use
 - Verify connection settings in `config.py`
+
+
+
+## References
+* GitHub RabbitMQ (Messaging Broker): https://github.com/rabbitmq
 
 
 ### Permission Errors

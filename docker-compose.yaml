@@ -1,0 +1,20 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+
+    # Expose the necessary ports to host machine
+    ports:
+      # 5672: The standard AMQP port for your Python Pika code to connect to (use 'localhost:5672')
+      - "5672:5672"
+      # 15672: The port for the web-based Management UI (http://localhost:15672)
+      - "15672:15672"
+
+    # Set the restart policy to ensure the broker is always available
+    restart: always
+
+    # Links the container data to a defined volume for persistence
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+
+volumes:
+  rabbitmq_data:

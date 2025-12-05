@@ -28,7 +28,7 @@ This project implements a robust file system scanner that integrates with Rabbit
    pip install -r requirements.txt
    ```
 
-2. **Activate virtual environment (if using one):**
+2. **Activate virtual environment:**
    ```bash
    source .venv/bin/activate
    ```
@@ -43,6 +43,13 @@ This project implements a robust file system scanner that integrates with Rabbit
    - Management UI: `http://localhost:15672` (web interface)
 
 ## Usage
+
+### Running the Verifier
+
+```bash
+python verify_consumer.py
+```
+
 
 ### Running the File Scanner
 
@@ -102,7 +109,7 @@ DEFAULT_ROUTING_KEY = 'norcom.routing.key'
 ## How to Check Messages in RabbitMQ
 
 
-### Method 1: Management UI
+### Method:
 
 
 1. Open `http://localhost:15672` in your browser

@@ -39,7 +39,7 @@ class RabbitMQProducer:
         self.connection = pika.BlockingConnection(parameters)
         self.channel = self.connection.channel()
         
-        # Declare exchange and queue
+        
         self.channel.exchange_declare(exchange=DEFAULT_EXCHANGE, exchange_type='direct', durable=True)
         self.channel.queue_declare(queue=self.queue, durable=True)
         self.channel.queue_bind(
@@ -58,7 +58,7 @@ class RabbitMQProducer:
                 routing_key=DEFAULT_ROUTING_KEY,
                 body=message_body,
                 properties=pika.BasicProperties(
-                    delivery_mode=2,  # Make message persistent
+                    delivery_mode=2,  
                     content_type='application/json'
                 )
             )
